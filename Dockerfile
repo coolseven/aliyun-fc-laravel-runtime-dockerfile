@@ -23,4 +23,7 @@ RUN mkdir -p /tmp/storage/framework/views \
 
 ENV STORAGE_PATH=/tmp/storage
 
+RUN chmod -R 777 /var/run \
+    && chmod -R 777 /var/log
+
 ENTRYPOINT ["/init"]
