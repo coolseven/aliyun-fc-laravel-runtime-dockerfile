@@ -19,7 +19,8 @@ RUN mkdir -p /tmp/storage/framework/views \
     && mkdir -p /tmp/storage/framework/cache \
     && mkdir -p /tmp/storage/framework/testing \
     && mkdir -p /tmp/storage/logs \
+    && chmod -R 777 /tmp/storage
 
-export STORAGE_PATH=/tmp/storage
+ENV STORAGE_PATH=/tmp/storage
 
 ENTRYPOINT ["/init"]
