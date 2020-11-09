@@ -1,0 +1,4 @@
+#!/usr/bin/execlineb -P
+
+# https://github.com/gliderlabs/docker-alpine/issues/185
+nginx -g "daemon off;"
